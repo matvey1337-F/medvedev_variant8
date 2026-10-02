@@ -1,0 +1,82 @@
+﻿<Window x:Class="medvedev_variant8.Pages.Task3Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Задача 3" Height="600" Width="700">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" 
+                   TextWrapping="Wrap" 
+                   FontSize="14" 
+                   Margin="0,0,0,15">
+            Задача 3: Дан массив из координат х N точек на прямой. 
+            Найти такую точку из данного множества, сумма расстояний 
+            от которой до остальных его точек минимальна, и саму эту сумму.
+        </TextBlock>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,5">
+            <TextBlock Text="Количество точек (N):" 
+                       VerticalAlignment="Center" 
+                       Width="180"/>
+            <TextBox x:Name="txtCount" 
+                     Width="100" 
+                     Height="30" 
+                     FontSize="14"/>
+        </StackPanel>
+
+        <Button Grid.Row="2" 
+                x:Name="btnGenerate" 
+                Content="Сгенерировать массив" 
+                Width="200" 
+                Height="40" 
+                HorizontalAlignment="Left"
+                Margin="0,15" 
+                FontSize="14"
+                Click="btnGenerate_Click"/>
+
+        <StackPanel Grid.Row="3" Margin="0,10">
+            <TextBlock Text="Исходный массив:" FontWeight="Bold"/>
+            <TextBox x:Name="txtArray" 
+                     Height="60" 
+                     FontSize="14" 
+                     IsReadOnly="True" 
+                     TextWrapping="Wrap"
+                     Margin="0,5,0,0"/>
+        </StackPanel>
+
+        <Button Grid.Row="4" 
+                x:Name="btnCalculate" 
+                Content="Выполнить" 
+                Width="200" 
+                Height="40" 
+                HorizontalAlignment="Left"
+                Margin="0,15" 
+                FontSize="14"
+                Click="btnCalculate_Click"/>
+
+        <StackPanel Grid.Row="5" Margin="0,10">
+            <TextBlock Text="Результат:" FontWeight="Bold"/>
+            <TextBox x:Name="txtResult" 
+                     Height="80" 
+                     FontSize="14" 
+                     IsReadOnly="True" 
+                     TextWrapping="Wrap"
+                     Margin="0,5,0,0"/>
+            <Button x:Name="btnBack" 
+                    Content="Назад в меню" 
+                    Width="200" 
+                    Height="40" 
+                    HorizontalAlignment="Left"
+                    Margin="0,20,0,0" 
+                    FontSize="14"
+                    Click="btnBack_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
