@@ -4,6 +4,7 @@ using medvedev_variant8.Pages;
 
 namespace medvedev_variant8
 {
+    // Тестовый комментарий
     public partial class MainWindow : Window
     {
         public MainWindow()
