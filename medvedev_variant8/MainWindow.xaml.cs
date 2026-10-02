@@ -10,6 +10,7 @@ namespace medvedev_variant8
         public MainWindow()
         {
             InitializeComponent();
+            // Второе изменение для фиксации без подготовки
         }
 
         private void btnTask1_Click(object sender, RoutedEventArgs e)
